@@ -1,2 +1,2 @@
-# Chat-Pdf
+# Chat-With-Pdf
 Upload a Pdf and get answers from it like Chat GPT works.
