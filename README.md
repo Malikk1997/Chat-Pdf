@@ -31,6 +31,19 @@ How I Did this project and a brief summary to understand things better.
    - The responses are displayed on the Streamlit app using `st.write`.
 
 9. **`if __name__ == '__main__':`**: This is the standard way to check if the script is being run as the main program. If so, it calls the `main()` function, which starts the Streamlit app.
+10. In the code provided, embeddings are used for several purposes, primarily to enable efficient text-based search and question-answering over the content of a PDF document. Here's a more detailed explanation of why embeddings are used in this context:
+
+a. Efficient Text-Based Search:
+
+Embeddings are vector representations of text or data that capture semantic information about the content. These vectors enable similarity calculations between text documents.
+In the code, the PDF document is split into smaller chunks of text, and embeddings are computed for each chunk. These embeddings are then stored in a data structure known as a "VectorStore."
+The VectorStore allows for efficient similarity searches. When a user submits a question or query, the code can search for the most relevant text chunks in the VectorStore based on the similarity between the query and the stored text chunks.
+
+b. Reducing Computational Load:
+
+Computing embeddings for text data is a computationally expensive process, especially when using sophisticated language models like OpenAI's GPT-3.5 Turbo.
+To avoid recomputing embeddings every time a user submits a question, the code checks if embeddings and the VectorStore have already been computed and saved to disk. If they exist, the code loads them from disk to save time and computational resources.
+This approach reduces the overall load on the system, making the application more responsive and efficient.
 
 The code is a complex Streamlit application that combines various libraries and services to allow users to interact with PDF documents using natural language queries. It involves PDF text extraction, text splitting, embeddings, and question answering powered by OpenAI. The chatbot-like functionality responds to user questions about the PDF content.
 
