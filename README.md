@@ -1,6 +1,9 @@
 # Chat-With-Pdf
 Upload a Pdf and get answers from it like Chat GPT works.
 
+*** Here, the Deployment will not work on cloud as it needs API key. Using OpenAI's GPT API may incur costs based on the usage volume, and it's important to review OpenAI's pricing details to understand the charges associated with your API usage.
+When deploying an application that uses the OpenAI API and if I make the API key accessible to the public, The it can lead to potential abuse or excessive usage that could lead to higher costs.
+
 How I Did this project and a brief summary to understand things better.
 
 1. **Import Statements**: The code begins by importing several Python libraries and modules, including `streamlit` for building the web application's user interface, `dotenv` for loading environment variables from a `.env` file, `pickle` for serializing and deserializing Python objects, `PyPDF2` for working with PDF files, and various modules from the "langchain" and "streamlit_extras" libraries for natural language processing and Streamlit utilities.
@@ -48,3 +51,7 @@ This approach reduces the overall load on the system, making the application mor
 The code is a complex Streamlit application that combines various libraries and services to allow users to interact with PDF documents using natural language queries. It involves PDF text extraction, text splitting, embeddings, and question answering powered by OpenAI. The chatbot-like functionality responds to user questions about the PDF content.
 
 Please note that this code assumes the presence of certain Python libraries, environment variables, and additional functionality provided by external libraries (e.g., "langchain"). Additionally, API keys and other sensitive information are expected to be provided in the environment variables for security purposes.
+
+
+*** Here, the Deployment will not work on cloud as it needs API key. Using OpenAI's GPT API may incur costs based on the usage volume, and it's important to review OpenAI's pricing details to understand the charges associated with your API usage.
+When deploying an application that uses the OpenAI API and if I make the API key accessible to the public, The it can lead to potential abuse or excessive usage that could lead to higher costs.
